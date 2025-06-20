@@ -18,4 +18,4 @@ class MyApp extends StatelessWidget {
       home: const HomeScreen(), // Указываем HomeScreen как главный экран
     );
   }
-}
+}//check
