@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Currenввуcy Exchange',
+      title: 'Currency Exchange',
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
       ),
