@@ -90,12 +90,20 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
             const SizedBox(height: 16),
-            ElevatedButton(
+            Transform.rotate(
+              angle: 5.5, // Поворот кнопки на 30 градусов
+            child: ElevatedButton(
               onPressed: convert,
-              child: const Text('Convert'),
-            ),
+              child: const Text('Convert')
+            )),
             const SizedBox(height: 16),
-            Text('Result: $result'),
+            Container(
+            child: Text('Result: $result'),
+            color: Colors.blue,
+            width: 200, height: 50,
+            alignment: Alignment.center,
+            transform: Matrix4.rotationZ(0.5), // Пример поворота,
+            )
           ],
         ),
       ),
