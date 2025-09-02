@@ -8,6 +8,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+
 class _HomeScreenState extends State<HomeScreen> {
   String fromCurrency = 'USD';
   String toCurrency = 'EUR';
@@ -91,22 +92,26 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 16),
             Transform.rotate(
-              angle: 5.5, // Поворот кнопки на 30 градусов
+              angle: 0, // Поворот кнопки на 30 градусов
             child: ElevatedButton(
               onPressed: convert,
               child: const Text('Convert')
             )),
             const SizedBox(height: 16),
             Container(
-            child: Text('Result: $result'),
+            child: Text('Result: $result', style: TextStyle(fontSize: 20)),
             color: Colors.blue,
             width: 200, height: 50,
             alignment: Alignment.center,
-            transform: Matrix4.rotationZ(0.5), // Пример поворота,
-            )
-          ],
-        ),
+            transform: Matrix4.rotationZ(0), // Пример поворота,
+            ),
+          const SizedBox(height: 20),
+          const Text(
+            'Made by Your Name',
+            style: TextStyle(fontSize: 16, color: Colors.grey),
+          ),
+        ],
       ),
-    );
-  }
-}
+    ),
+  );
+}}
